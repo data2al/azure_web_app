@@ -1,4 +1,5 @@
 from flask import Flask, redirect, url_for, render_template
+import streamlit as st
 
 app = Flask(__name__)
 
@@ -8,6 +9,11 @@ app = Flask(__name__)
 #create a home page and return some html
 def mainpage():
     return render_template("index.html", content = ['Tim', 'Joe', 'Pain'])
+
+@app.route('/streamlit')
+def streamlit():
+    st.set_page_config(page_title="My Streamlit App")
+    st.write("Hello, Streamlit Embedded!")
 
 @app.route("/home/")
 def home():
