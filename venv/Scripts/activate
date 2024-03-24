@@ -38,7 +38,7 @@ deactivate () {
 # unset irrelevant variables
 deactivate nondestructive
 
-VIRTUAL_ENV="C:\Users\alanl\Desktop\azure_web_app\azure_web_env"
+VIRTUAL_ENV="C:\Users\alanl\Desktop\azure_web_app\venv"
 export VIRTUAL_ENV
 
 _OLD_VIRTUAL_PATH="$PATH"
@@ -55,9 +55,9 @@ fi
 
 if [ -z "${VIRTUAL_ENV_DISABLE_PROMPT:-}" ] ; then
     _OLD_VIRTUAL_PS1="${PS1:-}"
-    PS1="(azure_web_env) ${PS1:-}"
+    PS1="(venv) ${PS1:-}"
     export PS1
-    VIRTUAL_ENV_PROMPT="(azure_web_env) "
+    VIRTUAL_ENV_PROMPT="(venv) "
     export VIRTUAL_ENV_PROMPT
 fi
 
